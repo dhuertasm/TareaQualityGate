@@ -24,7 +24,7 @@ jobs:
       - name: Pruebas+coverage
         id: pruebas
         run: |
-          pytest --cov --cov-report xml:cov.xml --cov-config=.coveragerc
+          pytest --cov --cov-report xml:coverage-reports/coverage.xml --cov-config=.coveragerc
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
